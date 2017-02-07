@@ -56,6 +56,7 @@
 
   // For Backbone's purposes, jQuery, Zepto, Ender, or My Library (kidding) owns
   // the `$` variable.
+  //引用jQuery, Zepto, Ender之一的全局对象
   Backbone.$ = $;
 
   // 防止冲突变量的解决方案，模仿了jQuery的写法(实际上，如果你选用了backbone，这种情况不算经常出现)
@@ -152,7 +153,8 @@
   var eventSplitter = /\s+/;
 
   /*
-    eventsApi这个api起到一个分流的作用，设计的非常有趣，导致添加的时候以下写法都是合法的：
+    eventsApi这个api起到一个分流的作用，对多事件进行解析拆分，设计的非常有趣，
+    导致添加的时候以下写法都是合法的：
 
     1.传入一个名称，回调函数的对象
     model.on({ 
