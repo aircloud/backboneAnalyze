@@ -14,7 +14,7 @@ backbone是我两年多前入门前端的时候接触到的第一个框架，当
 
 ### backbone宏观解读
 
-backbone是很早期将MVC的思想带入前端的框架，关于前端MVC，我在自己的<a href="http://aircloud.10000h.top/29" target="_blank">这篇文章</a>中结合阮一峰老师的图示简单分析过，简单来讲就是Model层控制数据，View层通过发布订阅(在backbone中)来处理和用户的交互，Controller是控制器，在这里主要是指backbone的路由功能。这样的设计非常直接清晰，有利于前端工程化。
+backbone是很早期将MVC的思想带入前端的框架，现在MVC以及后来的MVVM这么火可以在一定程度上归功于backbone。关于前端MVC，我在自己的<a href="http://aircloud.10000h.top/29" target="_blank">这篇文章</a>中结合阮一峰老师的图示简单分析过，简单来讲就是Model层控制数据，View层通过发布订阅(在backbone中)来处理和用户的交互，Controller是控制器，在这里主要是指backbone的路由功能。这样的设计非常直接清晰，有利于前端工程化。
 
 backbone中主要实现了Model、Collection、View、Router、History几大功能，前四种我们用的比较多，另外backbone基于发布-订阅模式自己实现了一套对象的事件系统Events，简单来说Events可以让对象拥有事件能力，其定义了比较丰富的API，并且如果你引入了backbone，这套事件系统还可以集成到自己的对象上，这是一个非常好的设计。
 
@@ -229,7 +229,7 @@ backbone的设计思路是这样的:用`_.once()`创建一个只能被调用一�
 
 #### trigger
 
-trigger函数是用于触发事件，支持多个参数，除了第一个参数以外，其他的参数会依次放入触发事件的回调函数的参数中(backbone默认对3个参数及以下的情况下进行call调用,这种处理方式原因之一是call调用比apply调用的效率更高从而优先使用(关于call和apply的性能对比：https://jsperf.com/call-apply-segu)，另外一方面源码中并没有超过三个参数的情况，所以支持到了三个参数)。
+trigger函数是用于触发事件，支持多个参数，除了第一个参数以外，其他的参数会依次放入触发事件的回调函数的参数中(backbone默认对3个参数及以下的情况下进行call调用,这种处理方式原因之一是call调用比apply调用的效率更高从而优先使用(关于call和apply的性能对比：<a href="https://jsperf.com/call-apply-segu">https://jsperf.com/call-apply-segu</a>)，另外一方面源码中并没有超过三个参数的情况，所以用call支持到了三个参数，其余情况采用性能较差但是写起来方便的apply)。
 
 另外值得一提的是，Events支持all事件，即如果你监听了all事件，那么任何事件的触发都会调用all事件的回调函数列。
 
