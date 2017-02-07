@@ -4,13 +4,13 @@
 
 backbone是我两年多前入门前端的时候接触到的第一个框架，当初被backbone的强大功能所吸引(当然的确比裸写js要好得多)，虽然现在backbone并不算最主流的前端框架了，但是，它里面大量设计模式的灵活运用，以及令人赞叹的处理技巧，还是非常值得学习。个人认为，读懂老牌框架的源代码比会用流行框架的API要有用的多。
 
-另外，backbone的源代码最近也改了许多，所以有些老旧的分析，可能会和现在的源代码有些出入。
+另外，backbone的源代码最近也改了许多(特别是针对**ES6**)，所以有些老旧的分析，可能会和现在的源代码有些出入。
 
-所以我写这一篇分析backbone的文章，供自己和大家一起学习，本文适合使用过backbone的朋友，笔者水平有限，难免会出差错，欢迎大家在<a href="https://github.com/aircloud/backboneAnalyze" target="_blank">GitHub</a>上指正
+所以我写这一篇分析backbone的文章，供自己和大家一起学习，本文适合使用过backbone的朋友，笔者水平有限，而内容又实有点多，难免会出差错，欢迎大家在<a href="https://github.com/aircloud/backboneAnalyze" target="_blank">GitHub</a>上指正
 
-接下来，我们将通过一篇文章解析backbone，我们是按照源码的顺序来讲解的，这有利于大家边看源代码边解读，另外，**我给源代码加了全部的中文注释和批注**，请见<a href="https://github.com/aircloud/backboneAnalyze/tree/master/src" target="_blank">这里</a>，强烈建议大家边看源码边看解析，并且遇到我给出外链的地方，最好把外链的内容也看看(如果能够给大家帮助，欢迎给star鼓励)
+接下来，我们将通过一篇文章解析backbone，我们是按照源码的顺序来讲解的，这有利于大家边看源代码边解读，另外，**我给源代码加了全部的中文注释和批注**，请见<a href="https://github.com/aircloud/backboneAnalyze/tree/master/src" target="_blank">这里</a>，强烈建议大家边看源码边看解析，并且遇到我给出外链的地方，最好把外链的内容也看看(如果能够给大家帮助，欢迎给star鼓励～)
 
-当然，这篇文章很长。
+当然，这篇文章很长[为了避免文章有上没下，我还是整合到一篇文章中了]。
 
 ### backbone宏观解读
 
