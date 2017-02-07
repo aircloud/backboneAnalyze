@@ -1,4 +1,4 @@
-backbone 源码解读
+##backbone源码解读
 
 ##### 写在前面
 
@@ -6,9 +6,9 @@ backbone是我两年多前入门前端的时候接触到的第一个框架，当
 
 另外，backbone的源代码最近也改了许多，所以有些老旧的分析，可能会和现在的源代码有些出入。
 
-所以我写这一篇分析backbone的文章，供自己和大家一起学习，本文适合使用过backbone的朋友，笔者水平有限，难免会出差错，欢迎大家在<a href="" target="_blank">GitHub</a>上指正
+所以我写这一篇分析backbone的文章，供自己和大家一起学习，本文适合使用过backbone的朋友，笔者水平有限，难免会出差错，欢迎大家在<a href="https://github.com/aircloud/backboneAnalyze" target="_blank">GitHub</a>上指正
 
-接下来，我们将通过一篇文章解析backbone，我们是按照源码的顺序来讲解的，这有利于大家边看源代码边解读，另外，**我给源代码加了全部的中文注释和批注**，请见<a href="" target="_blank">这里</a>，强烈建议大家边看源码边看解析，并且遇到我给出外链的地方，最好把外链的内容也看看(如果能够给大家帮助，欢迎给star鼓励)
+接下来，我们将通过一篇文章解析backbone，我们是按照源码的顺序来讲解的，这有利于大家边看源代码边解读，另外，**我给源代码加了全部的中文注释和批注**，请见<a href="https://github.com/aircloud/backboneAnalyze/tree/master/src" target="_blank">这里</a>，强烈建议大家边看源码边看解析，并且遇到我给出外链的地方，最好把外链的内容也看看(如果能够给大家帮助，欢迎给star鼓励)
 
 当然，这篇文章很长。
 
